@@ -1,0 +1,14 @@
+Package: fastportscan
+Version: 2.3
+Architecture: all
+Maintainer: Janindu AKA kra1t <kr41tnet@gmail.com>
+Depends: python3, python3-colorama, python3-tqdm
+Filename: /home/jay/Documents/Projects/BlackFang/git/blackfang-apt/pool/main/f/fastportscan/FastPortScan_2.3-1_all.deb
+Size: 2516
+MD5sum: 09288b89f84f450538ea4d9ba5e85ebf
+SHA1: 98b835e2a31db03eadd6286b5e238b2bc439c90c
+SHA256: d5555c404c2457de22fee6cbd4a96ac85d435734d9e8e891d8799b49896c1870
+Section: optional
+Priority: Priority
+Description: FastPortScan is a high-speed, multithreaded port scanner built with Python. It can perform both normal and stealth (SYN) scans, allowing you to efficiently identify open ports on a target machine. The tool is designed to be fast, customizable, and easy to use.
+
