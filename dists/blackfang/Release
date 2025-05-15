@@ -1,0 +1,13 @@
+Origin: BlackFang
+Label: BlackFang Repo
+Suite: stable
+Codename: blackfang
+Architectures: amd64
+Components: main
+Description: Custom BlackFang APT repository
+MD5Sum:
+ cbbaa1870e33c66c9fd9e7698c2de72e 478 dists/blackfang/main/binary-amd64/Packages.gz
+SHA1:
+ 47499c55989e030aebfb8d661a4b97fbf4a90304 478 dists/blackfang/main/binary-amd64/Packages.gz
+SHA256:
+ 9637442d0aaf93da0858c576a140ee1b39aa064ec8730ad1e55679223ae466d6 478 dists/blackfang/main/binary-amd64/Packages.gz
