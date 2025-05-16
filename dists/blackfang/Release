@@ -5,10 +5,10 @@ Codename: blackfang
 Architectures: amd64
 Components: main
 Description: Custom BlackFang APT repository
-Date: Fri, 16 May 2025 01:23:46 +0530
+Date: Fri, 16 May 2025 22:37:51 +0530
 MD5Sum:
- a1dfa6a91bde8f36a580048317ad69ea 543 main/binary-amd64/Packages.gz
+ 5e118bf3e1673d2d4a4312839018c43c 543 main/binary-amd64/Packages.gz
 SHA1:
- ae1779e1faf22a8cae2670a68d611739460c69b4 543 main/binary-amd64/Packages.gz
+ a1cdd9f8fef28627910b4d8d1f1db18d74da864d 543 main/binary-amd64/Packages.gz
 SHA256:
- c3c2fb79cd0ebac54b4f0cbb0cd280531ed9062feb2c00131999bfc5dfacac87 543 main/binary-amd64/Packages.gz
+ 4a9e414574e70fbc46c6045a63e5b01012adbe3ba9284ed7eb0bb0a726baff7b 543 main/binary-amd64/Packages.gz
