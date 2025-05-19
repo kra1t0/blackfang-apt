@@ -1,7 +1,20 @@
-Origin: BlackFang OS
-Label: BlackFang Repo
-Suite: stable
-Codename: stable
 Architectures: all
+Codename: stable
 Components: main
-Description: BlackFang OS custom packages
+Date: Mon, 19 May 2025 18:20:40 +0000
+Description: BlackFang Tools Repository
+Label: BlackFang APT
+Origin: BlackFang
+Suite: stable
+MD5Sum:
+ 6e120d53e256bb367cd7ab0a39d444e6              184 Release
+ 71092fb5869f0b70d594301750720088              371 main/binary-all/Packages.gz
+SHA1:
+ 408b93b6d2c5e17073545f6dbcaecb06c4ea4aef              184 Release
+ d64a700a033f92766fed02980cc8cee8bae63535              371 main/binary-all/Packages.gz
+SHA256:
+ a4dd44714983c3c7707343717df3b3f9f9dbd17a074f219a9abd8c1faa257471              184 Release
+ 1b8a6f67692989c41daa4324a10f925caee64ca14e84c7d86e97c542efb90c95              371 main/binary-all/Packages.gz
+SHA512:
+ 6a9008bddfde8c98ca4a50fdd93c5328185dd7195d55ecf9c1dcdaf67df3d273ce72d1de5b16ccf4d4572a4e7a72d5d22b89a796503bd6f38ad0e74b4c9ef7e0              184 Release
+ 9dcda6e0cba551e071a0c497380a12b495fcffef8a54d9f341e153701e40bb7ea77f76b50a3a3c1fa29c55f185c4abad9df5293753a6816bc186515950b068d3              371 main/binary-all/Packages.gz
