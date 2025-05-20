@@ -1,0 +1,14 @@
+Package: fastportscan
+Version: 1.0.0
+Architecture: all
+Maintainer: Janindu AKA kra1t <kr41tnet@gmail.com>
+Depends: python3, python3-colorama, python3-tqdm
+Filename: pool/main/fastportscan_1.0.0.deb
+Size: 2388
+MD5sum: 91edb843e541aec94eef9765c97458c7
+SHA1: 263b99d4fdf35cb969040984bd46e9c3ec44d725
+SHA256: 462406610ee93a3e2a3d46eb6e9c1be1219eb622532be318da14af1f7c51bc65
+Section: net
+Priority: optional
+Description: FastPortScan is a high-speed, multithreaded port scanner built with Python.
+

@@ -1,20 +1,34 @@
-Architectures: all
-Codename: stable
-Components: main
-Date: Mon, 19 May 2025 18:20:40 +0000
-Description: BlackFang Tools Repository
-Label: BlackFang APT
 Origin: BlackFang
+Label: BlackFang APT
 Suite: stable
+Codename: stable
+Version: 1.0
+Architectures: all amd64
+Components: main
+Date: Tue, 20 May 2025 18:47:34 +0000
+Description: APT repo for BlackFang tools
+
 MD5Sum:
- 6e120d53e256bb367cd7ab0a39d444e6              184 Release
- 71092fb5869f0b70d594301750720088              371 main/binary-all/Packages.gz
+ 0ad5822e1aa268b4551841cf7cabe0ab 833 ./InRelease
 SHA1:
- 408b93b6d2c5e17073545f6dbcaecb06c4ea4aef              184 Release
- d64a700a033f92766fed02980cc8cee8bae63535              371 main/binary-all/Packages.gz
+ e6c6dbcc9341c22e625976e41f1fe59c857f23c2 833 ./InRelease
 SHA256:
- a4dd44714983c3c7707343717df3b3f9f9dbd17a074f219a9abd8c1faa257471              184 Release
- 1b8a6f67692989c41daa4324a10f925caee64ca14e84c7d86e97c542efb90c95              371 main/binary-all/Packages.gz
-SHA512:
- 6a9008bddfde8c98ca4a50fdd93c5328185dd7195d55ecf9c1dcdaf67df3d273ce72d1de5b16ccf4d4572a4e7a72d5d22b89a796503bd6f38ad0e74b4c9ef7e0              184 Release
- 9dcda6e0cba551e071a0c497380a12b495fcffef8a54d9f341e153701e40bb7ea77f76b50a3a3c1fa29c55f185c4abad9df5293753a6816bc186515950b068d3              371 main/binary-all/Packages.gz
+ 2492eee11a2d00dee686ab1705163d3d0fe3b4b92f427e1ecefd8ece72ec1dbd 833 ./InRelease
+MD5Sum:
+ ec3a9febbb06eddd9176ffb6fc20c316 380 ./main/binary-all/Packages.gz
+SHA1:
+ 80d56975e1480bc14ee144991714ca155687eacc 380 ./main/binary-all/Packages.gz
+SHA256:
+ 57096f4629c20311da4ec90d6470d57db8a405ad8fd89b32e605a92b5f2b05cd 380 ./main/binary-all/Packages.gz
+MD5Sum:
+ 4fe84e10ddf6c61d8999a490e2256b47 492 ./main/binary-all/Packages
+SHA1:
+ a0fe40545ec19e8ea8d9b86eb197f7eac29142df 492 ./main/binary-all/Packages
+SHA256:
+ a75d94635c6733002f54d9514ad1b1668c6d828df25dc85e45bc0534cb20665f 492 ./main/binary-all/Packages
+MD5Sum:
+ 4fe84e10ddf6c61d8999a490e2256b47 492 ./main/binary-amd64/Packages
+SHA1:
+ a0fe40545ec19e8ea8d9b86eb197f7eac29142df 492 ./main/binary-amd64/Packages
+SHA256:
+ a75d94635c6733002f54d9514ad1b1668c6d828df25dc85e45bc0534cb20665f 492 ./main/binary-amd64/Packages
