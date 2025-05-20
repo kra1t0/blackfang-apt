@@ -5,30 +5,14 @@ Codename: stable
 Version: 1.0
 Architectures: all amd64
 Components: main
-Date: Tue, 20 May 2025 18:47:34 +0000
+Date: Tue, 20 May 2025 19:08:25 +0000
 Description: APT repo for BlackFang tools
 
 MD5Sum:
- 0ad5822e1aa268b4551841cf7cabe0ab 833 ./InRelease
-SHA1:
- e6c6dbcc9341c22e625976e41f1fe59c857f23c2 833 ./InRelease
-SHA256:
- 2492eee11a2d00dee686ab1705163d3d0fe3b4b92f427e1ecefd8ece72ec1dbd 833 ./InRelease
-MD5Sum:
- ec3a9febbb06eddd9176ffb6fc20c316 380 ./main/binary-all/Packages.gz
-SHA1:
- 80d56975e1480bc14ee144991714ca155687eacc 380 ./main/binary-all/Packages.gz
-SHA256:
- 57096f4629c20311da4ec90d6470d57db8a405ad8fd89b32e605a92b5f2b05cd 380 ./main/binary-all/Packages.gz
-MD5Sum:
+ eaefe9fd701efa3cbc26b1fcf0b6906b 380 ./main/binary-all/Packages.gz
  4fe84e10ddf6c61d8999a490e2256b47 492 ./main/binary-all/Packages
-SHA1:
- a0fe40545ec19e8ea8d9b86eb197f7eac29142df 492 ./main/binary-all/Packages
-SHA256:
- a75d94635c6733002f54d9514ad1b1668c6d828df25dc85e45bc0534cb20665f 492 ./main/binary-all/Packages
-MD5Sum:
  4fe84e10ddf6c61d8999a490e2256b47 492 ./main/binary-amd64/Packages
-SHA1:
- a0fe40545ec19e8ea8d9b86eb197f7eac29142df 492 ./main/binary-amd64/Packages
 SHA256:
+ 6e17e7181c15a40b88bd609e988e5f7b07c7bb62d07df74364d494d3dc0cf15a 380 ./main/binary-all/Packages.gz
+ a75d94635c6733002f54d9514ad1b1668c6d828df25dc85e45bc0534cb20665f 492 ./main/binary-all/Packages
  a75d94635c6733002f54d9514ad1b1668c6d828df25dc85e45bc0534cb20665f 492 ./main/binary-amd64/Packages

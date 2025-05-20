@@ -60,18 +60,35 @@ RELEASE_FILE="$REPO_DIR/dists/$DIST/Release"
 
 echo "🔐 Adding hashes to Release file..."
 cd "$REPO_DIR/dists/$DIST"
-for file in $(find . -type f | grep -v './Release'); do
-    size=$(stat --format="%s" "$file")
-    md5=$(md5sum "$file" | awk '{print $1}')
-    sha1=$(sha1sum "$file" | awk '{print $1}')
-    sha256=$(sha256sum "$file" | awk '{print $1}')
-    echo "MD5Sum:" >> Release
-    echo " $md5 $size $file" >> Release
-    echo "SHA1:" >> Release
-    echo " $sha1 $size $file" >> Release
-    echo "SHA256:" >> Release
-    echo " $sha256 $size $file" >> Release
-done
+
+{
+    echo "Origin: BlackFang"
+    echo "Label: BlackFang APT"
+    echo "Suite: $DIST"
+    echo "Codename: $DIST"
+    echo "Version: 1.0"
+    echo -n "Architectures:"
+    for arch in "${ARCHS[@]}"; do echo -n " $arch"; done
+    echo ""
+    echo "Components: $COMPONENT"
+    echo "Date: $(date -Ru)"
+    echo "Description: APT repo for BlackFang tools"
+    echo ""
+    
+    echo "MD5Sum:"
+    find . -type f \( -name "Packages" -o -name "Packages.gz" \) | while read -r file; do
+        size=$(stat -c%s "$file")
+        md5=$(md5sum "$file" | cut -d' ' -f1)
+        printf " %s %d %s\n" "$md5" "$size" "$file"
+    done
+
+    echo "SHA256:"
+    find . -type f \( -name "Packages" -o -name "Packages.gz" \) | while read -r file; do
+        size=$(stat -c%s "$file")
+        sha256=$(sha256sum "$file" | cut -d' ' -f1)
+        printf " %s %d %s\n" "$sha256" "$size" "$file"
+    done
+} > Release
 
 cd "$REPO_DIR"
 
