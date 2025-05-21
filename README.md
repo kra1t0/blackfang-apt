@@ -23,6 +23,7 @@ To use this repository on your Debian-based system:
 1. Add the repository to your APT sources:
 
 ```bash
-echo "deb [trusted=yes] https://kra1t0.github.io/blackfang-apt/ stable main" | sudo tee /etc/apt/sources.list```
+echo "deb [trusted=yes] https://kra1t0.github.io/blackfang-apt/ stable main" | sudo tee /etc/apt/sources.list
+```
 
 > **The Final Error-free version is installed and updated.**
