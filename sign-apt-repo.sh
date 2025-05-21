@@ -1,62 +1,51 @@
 #!/bin/bash
-# Script to GPG-sign APT repo and generate Release files
 
-set -e
+# Constants
+REPO_DIR="$(pwd)/dists/stable"
+KEY_ID="9D670521FCBFDDB0698FEA4C79888DF31565EE8D"  # Replace with your GPG key ID or email
 
-# Define paths
-REPO_DIR="/path/to/blackfang-apt"
-DIST="stable"
-ARCHS=("binary-all" "binary-amd64")
-KEY_ID="9D670521FCBFDDB0698FEA4C79888DF31565EE8D"
+# Check if gpg key exists
+gpg --list-keys "$KEY_ID" > /dev/null 2>&1
+if [ $? -ne 0 ]; then
+  echo "[!] GPG key not found: $KEY_ID"
+  exit 1
+fi
 
-# Change to the repo directory
-cd "$REPO_DIR/dists/$DIST"
+# Step 1: Generate Release file (make sure it exists)
+if [ ! -f "$REPO_DIR/Release" ]; then
+  echo "[!] Release file not found at $REPO_DIR/Release"
+  exit 1
+fi
 
-# Rebuild Packages.gz (optional if packages are updated)
-echo "[+] Rebuilding Packages.gz files"
-for ARCH in "${ARCHS[@]}"; do
-    ARCH_PATH="$REPO_DIR/dists/$DIST/main/$ARCH"
-    if [ -d "$ARCH_PATH" ]; then
-        echo "  - $ARCH"
-        dpkg-scanpackages -m "$REPO_DIR/pool" /dev/null | gzip -9c > "$ARCH_PATH/Packages.gz"
-    fi
-done
+# Step 2: Sign the Release file
+cd "$REPO_DIR" || exit 1
 
-# Generate Release file
-echo "[+] Generating Release file"
-cat > Release <<EOF
-Origin: BlackFang
-Label: BlackFang APT
-Suite: stable
-Version: 1.0
-Codename: stable
-Date: $(date -Ru)
-Architectures: amd64 all
-Components: main
-Description: Official BlackFang OS APT repository
-MD5Sum:
-EOF
+# Clear old signatures if they exist
+rm -f Release.gpg InRelease
 
-# Add MD5 hashes
-for ARCH in "${ARCHS[@]}"; do
-    PKG_FILE="main/$ARCH/Packages.gz"
-    [ -f "$PKG_FILE" ] && echo " $(md5sum $PKG_FILE | cut -d' ' -f1) $(wc -c < $PKG_FILE) $PKG_FILE" >> Release
-done
+# Detached signature (Release.gpg)
+gpg --default-key "$KEY_ID" \
+    --output Release.gpg \
+    --detach-sign \
+    --yes \
+    --batch \
+    Release
 
-# Sign the Release file (detached and clear-signed)
-echo "[+] Signing Release file"
-gpg --default-key "$KEY_ID" -abs -o Release.gpg Release
-gpg --default-key "$KEY_ID" --clearsign -o InRelease Release
+# Inline clear-signed signature (InRelease)
+gpg --default-key "$KEY_ID" \
+    --output InRelease \
+    --clearsign \
+    --yes \
+    --batch \
+    Release
 
-# Export public key (optional but recommended)
+# Step 3: Export public key (optional for clients to trust)
 gpg --armor --export "$KEY_ID" > "$REPO_DIR/blackfang.gpg"
 
-echo "[+] Done. Upload 'InRelease', 'Release.gpg', and 'blackfang.gpg' to GitHub"
-
-# Tip:
-# If hosted via GitHub Pages, make sure files are uploaded to:
-#   - dists/stable/Release
-#   - dists/stable/Release.gpg
-#   - dists/stable/InRelease
-#   - blackfang.gpg at root or dists/ if preferred
+# Done
+echo "[+] Signing complete. Upload the following to your APT repo root:"
+echo "  - dists/stable/Release"
+echo "  - dists/stable/Release.gpg"
+echo "  - dists/stable/InRelease"
+echo "  - dists/stable/blackfang.gpg (optional public key for users)"
 
