@@ -1,59 +1,45 @@
 #!/bin/bash
 
-# Set repo variables
-REPO_DIR="$(pwd)"
+# ========================
+# APT Repo Signer Script
+# Author: Kra1t (Janindu)
+# Description: Signs APT repo Release files and generates GPG artifacts
+# ========================
+
+# === CONFIGURATION ===
+REPO_DIR="$(pwd)" # Path to the root of your APT repo
 DIST="stable"
-COMPONENT="main"
-ARCHS=("binary-all" "binary-amd64")
-GPG_KEY_ID="YOUR-GPG-KEY-ID-HERE"
+KEY_ID="9D670521FCBFDDB0698FEA4C79888DF31565EE8D" # Change this to your actual GPG key ID or email
 
-echo "[*] Generating Packages and Packages.gz files..."
+# === Paths ===
+DIST_DIR="$REPO_DIR/dists/$DIST"
+RELEASE_FILE="$DIST_DIR/Release"
+RELEASE_GPG_FILE="$DIST_DIR/Release.gpg"
+INRELEASE_FILE="$DIST_DIR/InRelease"
+PACKAGES_DIR="$DIST_DIR/main/binary-all"
+POOL_DIR="$REPO_DIR/pool"
 
-for ARCH in "${ARCHS[@]}"; do
-    TARGET_DIR="$REPO_DIR/dists/$DIST/$COMPONENT/$ARCH"
-    if [[ -d "$TARGET_DIR" ]]; then
-        echo "    - Processing $ARCH"
-        dpkg-scanpackages "$REPO_DIR/pool" /dev/null > "$TARGET_DIR/Packages"
-        gzip -kf "$TARGET_DIR/Packages"
-    fi
-done
+# === Step 1: Generate Packages.gz ===
+echo "[*] Generating Packages.gz from pool..."
+dpkg-scanpackages "$POOL_DIR" /dev/null | gzip -9c > "$PACKAGES_DIR/Packages.gz"
 
-echo "[*] Generating Release file with hashes..."
+# === Step 2: Generate Release file ===
+echo "[*] Generating Release file..."
+apt-ftparchive release "$DIST_DIR" > "$RELEASE_FILE"
 
-cd "$REPO_DIR/dists/$DIST"
+# === Step 3: Sign Release file ===
+echo "[*] Signing Release file with GPG key: $KEY_ID"
+gpg --default-key "$KEY_ID" --output "$RELEASE_GPG_FILE" -ba "$RELEASE_FILE"
+gpg --default-key "$KEY_ID" --output "$INRELEASE_FILE" -abs "$RELEASE_FILE"
 
-cat > Release <<EOF
-Origin: BlackFang
-Label: BlackFang APT
-Suite: stable
-Codename: stable
-Architectures: all amd64
-Components: main
-Description: BlackFang APT Repository
-Date: $(date -Ru)
-EOF
+# === Step 4: Export GPG public key (for users to trust) ===
+echo "[*] Exporting GPG public key..."
+gpg --armor --output "$REPO_DIR/blackfang.gpg" --export "$KEY_ID"
 
-# Append hash fields for Packages and Packages.gz
-{
-    echo "MD5Sum:"
-    find $COMPONENT -type f \( -name "Packages" -o -name "Packages.gz" \) | while read f; do
-        printf " %s %16d %s\n" "$(md5sum < "$f" | cut -d' ' -f1)" "$(stat -c%s "$f")" "$f"
-    done
-
-    echo "SHA256:"
-    find $COMPONENT -type f \( -name "Packages" -o -name "Packages.gz" \) | while read f; do
-        printf " %s %16d %s\n" "$(sha256sum < "$f" | cut -d' ' -f1)" "$(stat -c%s "$f")" "$f"
-    done
-
-    echo "SHA512:"
-    find $COMPONENT -type f \( -name "Packages" -o -name "Packages.gz" \) | while read f; do
-        printf " %s %16d %s\n" "$(sha512sum < "$f" | cut -d' ' -f1)" "$(stat -c%s "$f")" "$f"
-    done
-} >> Release
-
-echo "[*] Signing Release file..."
-gpg --default-key "$GPG_KEY_ID" -abs -o Release.gpg Release
-gpg --default-key "$GPG_KEY_ID" --clearsign -o InRelease Release
-
-echo "[✓] Repository signed and release files generated."
+# === Done ===
+echo "[+] Repo signing complete. Upload the updated files to GitHub."
+echo "  - $RELEASE_FILE"
+echo "  - $RELEASE_GPG_FILE"
+echo "  - $INRELEASE_FILE"
+echo "  - blackfang.gpg"
 

@@ -1,23 +1,25 @@
-Origin: BlackFang
-Label: BlackFang APT
-Suite: stable
-Codename: stable
-Architectures: all amd64
-Components: main
-Description: BlackFang APT Repository
-Date: Wed, 21 May 2025 17:50:56 +0000
+Date: Wed, 21 May 2025 18:16:08 +0000
 MD5Sum:
- c8b82d37343efb3ae7af9b0c639e8f2b              421 main/binary-all/Packages.gz
+ 62297daee6595ed4ad4c80914c932ae0               38 Release
  8ca7fad1114c4e9d89e87ae028f06054              549 main/binary-all/Packages
- c8b82d37343efb3ae7af9b0c639e8f2b              421 main/binary-amd64/Packages.gz
+ a1a0424259cf1f2ff1ffc16bd17c711b              412 main/binary-all/Packages.gz
  8ca7fad1114c4e9d89e87ae028f06054              549 main/binary-amd64/Packages
+ c8b82d37343efb3ae7af9b0c639e8f2b              421 main/binary-amd64/Packages.gz
+SHA1:
+ 7ff0b39ecb6d603b1d9c0423d3b608b1574e8214               38 Release
+ e47d4611f425bcb1d830c78e527e035963b8cebc              549 main/binary-all/Packages
+ 76b6c6550fecc51a7cf00600b5100bcae7087b53              412 main/binary-all/Packages.gz
+ e47d4611f425bcb1d830c78e527e035963b8cebc              549 main/binary-amd64/Packages
+ 902faca8f83890b07ea701874b4e371cb244a61f              421 main/binary-amd64/Packages.gz
 SHA256:
- 06910d6014b587101133344f0b9aa43205539044f52d699955336e7890379577              421 main/binary-all/Packages.gz
+ 97e3d9f8ad2353000b15cb0f4f29d96a500493ca99fc69302ff8d5b3a3366b13               38 Release
  b0bc4dbb150b081dde9c2aba11f2ce1059c2e34b848bd3e05ce8288826d710ae              549 main/binary-all/Packages
- 06910d6014b587101133344f0b9aa43205539044f52d699955336e7890379577              421 main/binary-amd64/Packages.gz
+ 7027688278f13a2ff42b22319ac71d3d33954b21201f6d8ade0fab14b19bd774              412 main/binary-all/Packages.gz
  b0bc4dbb150b081dde9c2aba11f2ce1059c2e34b848bd3e05ce8288826d710ae              549 main/binary-amd64/Packages
+ 06910d6014b587101133344f0b9aa43205539044f52d699955336e7890379577              421 main/binary-amd64/Packages.gz
 SHA512:
- 0664a47e2ef7424ede13819cd178343d475fa053e7f9192df5eb23e5ce251f0111796f2ab5e079aa75ae00a687bb17258465cab0d0e17c7017522f4513d121b8              421 main/binary-all/Packages.gz
+ 3433ee1d1cf92261d364f7946c4901084e885bca75d95048716f12bf0fd754ff04cfdf6a657e7354d5c9b97797658fccccf6c6e03d93a7b1d1ff77bf47c2db28               38 Release
  51f60c55b0fe9fa867e9e47ec1daa3fef05dcd72294d0151950583d0b393829563dbd4ac8536ae4df47a95ad3ce4108387170991e80ab28b528e044854a6bd07              549 main/binary-all/Packages
- 0664a47e2ef7424ede13819cd178343d475fa053e7f9192df5eb23e5ce251f0111796f2ab5e079aa75ae00a687bb17258465cab0d0e17c7017522f4513d121b8              421 main/binary-amd64/Packages.gz
+ fba5846322c60dc891497da305c71211a6ed5e8b0b46d1668d405a8fa31b7598c443abe4f70bbca8463f39723fe64b71232e2c353283fe9a1a1accfe7f959b09              412 main/binary-all/Packages.gz
  51f60c55b0fe9fa867e9e47ec1daa3fef05dcd72294d0151950583d0b393829563dbd4ac8536ae4df47a95ad3ce4108387170991e80ab28b528e044854a6bd07              549 main/binary-amd64/Packages
+ 0664a47e2ef7424ede13819cd178343d475fa053e7f9192df5eb23e5ce251f0111796f2ab5e079aa75ae00a687bb17258465cab0d0e17c7017522f4513d121b8              421 main/binary-amd64/Packages.gz

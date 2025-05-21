@@ -1,42 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA512
-
-Origin: BlackFang
-Label: BlackFang APT
-Suite: stable
-Codename: stable
-Architectures: all amd64
-Components: main
-Description: BlackFang APT Repository
-Date: Wed, 21 May 2025 17:50:56 +0000
-MD5Sum:
- c8b82d37343efb3ae7af9b0c639e8f2b              421 main/binary-all/Packages.gz
- 8ca7fad1114c4e9d89e87ae028f06054              549 main/binary-all/Packages
- c8b82d37343efb3ae7af9b0c639e8f2b              421 main/binary-amd64/Packages.gz
- 8ca7fad1114c4e9d89e87ae028f06054              549 main/binary-amd64/Packages
-SHA256:
- 06910d6014b587101133344f0b9aa43205539044f52d699955336e7890379577              421 main/binary-all/Packages.gz
- b0bc4dbb150b081dde9c2aba11f2ce1059c2e34b848bd3e05ce8288826d710ae              549 main/binary-all/Packages
- 06910d6014b587101133344f0b9aa43205539044f52d699955336e7890379577              421 main/binary-amd64/Packages.gz
- b0bc4dbb150b081dde9c2aba11f2ce1059c2e34b848bd3e05ce8288826d710ae              549 main/binary-amd64/Packages
-SHA512:
- 0664a47e2ef7424ede13819cd178343d475fa053e7f9192df5eb23e5ce251f0111796f2ab5e079aa75ae00a687bb17258465cab0d0e17c7017522f4513d121b8              421 main/binary-all/Packages.gz
- 51f60c55b0fe9fa867e9e47ec1daa3fef05dcd72294d0151950583d0b393829563dbd4ac8536ae4df47a95ad3ce4108387170991e80ab28b528e044854a6bd07              549 main/binary-all/Packages
- 0664a47e2ef7424ede13819cd178343d475fa053e7f9192df5eb23e5ce251f0111796f2ab5e079aa75ae00a687bb17258465cab0d0e17c7017522f4513d121b8              421 main/binary-amd64/Packages.gz
- 51f60c55b0fe9fa867e9e47ec1daa3fef05dcd72294d0151950583d0b393829563dbd4ac8536ae4df47a95ad3ce4108387170991e80ab28b528e044854a6bd07              549 main/binary-amd64/Packages
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEnWcFIfy/3bBpj+pMeYiN8xVl7o0FAmguEokACgkQeYiN8xVl
-7o1PXBAAtWIXwSqvvBSHdbPpQoxEG/JqxrdNAjLjro7oYOF+tLwY7+tA1NR5hM+H
-5Q7vb8kl8u6YfZX0JogaQj8dl3ipvFF9WKZMqkv2UnrkBLuF8FZMF+lMLmup9hYU
-ZmH9PhLgrRa0NQh8qCHwK4bKmYXklHhM5kVLw8WFguVitB7aFRxK3bgFEBIUTThr
-QnYzg0S5R1jk+PIonu4cbaEa3+pUyEaLpIHa90CKW1W6nWzQhhD66FTPf3NPTGy1
-Fb2ZOe+kufq4W6tdCn5XSXq5sjrJBS9HgrEdlSt9vBJWhL8iqai55vS+G3tIp48g
-Jk19eXvHVG2IQWXttJXQV3tjQbaM6N8H9JF+xXOkLLjrzLNcO3eHbQ4mznzacZih
-I0uufH8q4RCUa9kT3cNMRhrwG07AYmTnb6PKc008wbhE4qgsFsxywGYu6cPswjHy
-29NGy+1NPvO2HFFfrnLKTA8FgloLQpfAFQO9LW5mA1RFZglqbdfGlWgZQulnxts7
-5bln3+Z5n4aN+l3EMClHQMfZPS5oTfeqT2cYamJHRx0JvvVwGp4Y6YChDOH8OlDU
-vx/hVX96KPqeJttSpM7cF/ak0SVmZnc+NO6MN0psVTf8iwwcSphi0yOH5s8U8wCx
-fU1KVONva3FbonFivBrR3xUyE/2akaGraPrvV+/XkX3vG4X7mTo=
-=VZTR
+iQIzBAABCgAdFiEEnWcFIfy/3bBpj+pMeYiN8xVl7o0FAmguGHAACgkQeYiN8xVl
+7o1hHxAAkIGxAPC5roSvjMyKvy+6gJ7PTnAVsgDksuDxZdflP53cyXpc7uIxhO1s
+VLIikZXdXKM9tJn53JxYElKxqAtyp/UUZLFt6ihRJUyIw36W+Ze3q0LWxAkcpa81
+Lcm85dBnGR52aIxflj9PsqJ/Moesohs9KIHg4dPJSeDEDBWUWqHjIX6s0L6Ou/K6
+bkeKysGSrHx0jqr7/tIwu3B+7uRA9Wqxr6kLktpi6LlBCJ8KdITs23XApNk8TP/u
+dEhGGNYcqJUmKKRa/SmTlWBOW9oh5RdKwECoSvFPxFva/cFNW7Ny4JKEr7dQbhFT
+km+amDN69Npb2bxca9eI8soJ1lMxFik5GotAlt4E7Ej/LIx7+CXlEkZichdrLpml
+gJhSsd4+BxbY0D3NH9DNp6DIsvCLjV7Oq7CFbYuXOR+Wm1B6gMUTOrtUEcBOeXys
+kxP6Yk+rRW2O5Qot7G7Y25RYnKI92x/aX1RMuHrgzEBdaP7+J2WhL9k2/N/bjs3y
+XIWlluEsO3qpIcx+db4xIB79oOutbuUjmOQvOvRvAEtZkepxPUPkC3l83AnAhgjA
+wZoMjNnO1n4Ev1c217MOL3EbYAX3BvyBzTxAVf6ujxpfg8YOvSI99CZlq4oCV8dP
+cTGWeVlBruVhsWXgyyZ1X4RqHNKgEDqU19iCgOHCx2oryTGIaYs=
+=O2sR
 -----END PGP SIGNATURE-----
