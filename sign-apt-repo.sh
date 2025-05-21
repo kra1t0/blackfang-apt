@@ -1,51 +1,54 @@
 #!/bin/bash
 
-# Constants
-REPO_DIR="$(pwd)/dists/stable"
-KEY_ID="9D670521FCBFDDB0698FEA4C79888DF31565EE8D"  # Replace with your GPG key ID or email
+# === Configuration ===
+REPO_NAME="blackfang-apt"
+DIST="stable"
+COMPONENT="main"
+ARCHS=(amd64 all)
+KEY_ID="79888DF31565EE8D"
+GPG_KEYRING="$HOME/.gnupg/pubring.kbx"
 
-# Check if gpg key exists
-gpg --list-keys "$KEY_ID" > /dev/null 2>&1
-if [ $? -ne 0 ]; then
-  echo "[!] GPG key not found: $KEY_ID"
-  exit 1
-fi
+# === Directory structure ===
+BASE_DIR="$(pwd)"
+DIST_DIR="$BASE_DIR/dists/$DIST"
+POOL_DIR="$BASE_DIR/pool/$COMPONENT"
 
-# Step 1: Generate Release file (make sure it exists)
-if [ ! -f "$REPO_DIR/Release" ]; then
-  echo "[!] Release file not found at $REPO_DIR/Release"
-  exit 1
-fi
+# === Clean old files ===
+echo "[+] Cleaning old metadata..."
+rm -f $DIST_DIR/Release $DIST_DIR/InRelease $DIST_DIR/Release.gpg
 
-# Step 2: Sign the Release file
-cd "$REPO_DIR" || exit 1
+# === Generate Packages.gz ===
+echo "[+] Generating Packages.gz for each architecture..."
+for ARCH in "${ARCHS[@]}"; do
+    ARCH_DIR="$DIST_DIR/$COMPONENT/binary-$ARCH"
+    mkdir -p "$ARCH_DIR"
+    echo "  -> Processing $ARCH..."
+    apt-ftparchive packages "$POOL_DIR" \
+        | gzip -9 > "$ARCH_DIR/Packages.gz"
+    apt-ftparchive packages "$POOL_DIR" > "$ARCH_DIR/Packages"
+done
 
-# Clear old signatures if they exist
-rm -f Release.gpg InRelease
+# === Generate main Release file ===
+echo "[+] Generating Release file..."
+cat > $DIST_DIR/Release <<EOF
+Origin: BlackFang
+Label: BlackFang APT
+Suite: $DIST
+Codename: $DIST
+Architectures: ${ARCHS[*]}
+Components: $COMPONENT
+Description: BlackFang OS APT Repository
+EOF
 
-# Detached signature (Release.gpg)
-gpg --default-key "$KEY_ID" \
-    --output Release.gpg \
-    --detach-sign \
-    --yes \
-    --batch \
-    Release
+# Include package metadata in Release file
+echo "[+] Adding file hashes to Release..."
+apt-ftparchive release $DIST_DIR >> $DIST_DIR/Release
 
-# Inline clear-signed signature (InRelease)
-gpg --default-key "$KEY_ID" \
-    --output InRelease \
-    --clearsign \
-    --yes \
-    --batch \
-    Release
+# === Sign the Release file ===
+echo "[+] Signing Release file..."
+gpg --default-key "$KEY_ID" -abs -o "$DIST_DIR/Release.gpg" "$DIST_DIR/Release"
+gpg --default-key "$KEY_ID" --clearsign -o "$DIST_DIR/InRelease" "$DIST_DIR/Release"
 
-# Step 3: Export public key (optional for clients to trust)
-gpg --armor --export "$KEY_ID" > "$REPO_DIR/blackfang.gpg"
-
-# Done
-echo "[+] Signing complete. Upload the following to your APT repo root:"
-echo "  - dists/stable/Release"
-echo "  - dists/stable/Release.gpg"
-echo "  - dists/stable/InRelease"
-echo "  - dists/stable/blackfang.gpg (optional public key for users)"
+# === Done ===
+echo "[✔] Repository metadata updated and signed successfully."
 

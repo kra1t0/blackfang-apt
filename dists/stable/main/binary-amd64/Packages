@@ -1,6 +1,8 @@
 Package: fastportscan
-Version: 1.0.0
 Architecture: all
+Version: 1.0.0
+Priority: optional
+Section: net
 Maintainer: Janindu AKA kra1t <kr41tnet@gmail.com>
 Depends: python3, python3-colorama, python3-tqdm
 Filename: /home/jay/Documents/Projects/BlackFang/git/blackfang-apt/pool/main/fastportscan_1.0.0.deb
@@ -8,7 +10,6 @@ Size: 2388
 MD5sum: 91edb843e541aec94eef9765c97458c7
 SHA1: 263b99d4fdf35cb969040984bd46e9c3ec44d725
 SHA256: 462406610ee93a3e2a3d46eb6e9c1be1219eb622532be318da14af1f7c51bc65
-Section: net
-Priority: optional
+SHA512: b42f7818fe923a8b4f15adbb9136e47236d8369241782944296c1ce548f9c3b428ddf138d3fbd49216b18ae07fa9b92560f423dc6122c149eef3cbffbd578bc1
 Description: FastPortScan is a high-speed, multithreaded port scanner built with Python.
 
