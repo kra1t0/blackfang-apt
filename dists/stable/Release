@@ -2,17 +2,22 @@ Origin: BlackFang
 Label: BlackFang APT
 Suite: stable
 Codename: stable
-Version: 1.0
 Architectures: all amd64
 Components: main
-Date: Tue, 20 May 2025 19:08:25 +0000
-Description: APT repo for BlackFang tools
-
+Description: BlackFang APT Repository
+Date: Wed, 21 May 2025 17:50:56 +0000
 MD5Sum:
- eaefe9fd701efa3cbc26b1fcf0b6906b 380 ./main/binary-all/Packages.gz
- 4fe84e10ddf6c61d8999a490e2256b47 492 ./main/binary-all/Packages
- 4fe84e10ddf6c61d8999a490e2256b47 492 ./main/binary-amd64/Packages
+ c8b82d37343efb3ae7af9b0c639e8f2b              421 main/binary-all/Packages.gz
+ 8ca7fad1114c4e9d89e87ae028f06054              549 main/binary-all/Packages
+ c8b82d37343efb3ae7af9b0c639e8f2b              421 main/binary-amd64/Packages.gz
+ 8ca7fad1114c4e9d89e87ae028f06054              549 main/binary-amd64/Packages
 SHA256:
- 6e17e7181c15a40b88bd609e988e5f7b07c7bb62d07df74364d494d3dc0cf15a 380 ./main/binary-all/Packages.gz
- a75d94635c6733002f54d9514ad1b1668c6d828df25dc85e45bc0534cb20665f 492 ./main/binary-all/Packages
- a75d94635c6733002f54d9514ad1b1668c6d828df25dc85e45bc0534cb20665f 492 ./main/binary-amd64/Packages
+ 06910d6014b587101133344f0b9aa43205539044f52d699955336e7890379577              421 main/binary-all/Packages.gz
+ b0bc4dbb150b081dde9c2aba11f2ce1059c2e34b848bd3e05ce8288826d710ae              549 main/binary-all/Packages
+ 06910d6014b587101133344f0b9aa43205539044f52d699955336e7890379577              421 main/binary-amd64/Packages.gz
+ b0bc4dbb150b081dde9c2aba11f2ce1059c2e34b848bd3e05ce8288826d710ae              549 main/binary-amd64/Packages
+SHA512:
+ 0664a47e2ef7424ede13819cd178343d475fa053e7f9192df5eb23e5ce251f0111796f2ab5e079aa75ae00a687bb17258465cab0d0e17c7017522f4513d121b8              421 main/binary-all/Packages.gz
+ 51f60c55b0fe9fa867e9e47ec1daa3fef05dcd72294d0151950583d0b393829563dbd4ac8536ae4df47a95ad3ce4108387170991e80ab28b528e044854a6bd07              549 main/binary-all/Packages
+ 0664a47e2ef7424ede13819cd178343d475fa053e7f9192df5eb23e5ce251f0111796f2ab5e079aa75ae00a687bb17258465cab0d0e17c7017522f4513d121b8              421 main/binary-amd64/Packages.gz
+ 51f60c55b0fe9fa867e9e47ec1daa3fef05dcd72294d0151950583d0b393829563dbd4ac8536ae4df47a95ad3ce4108387170991e80ab28b528e044854a6bd07              549 main/binary-amd64/Packages

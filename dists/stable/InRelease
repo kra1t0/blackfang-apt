@@ -5,33 +5,38 @@ Origin: BlackFang
 Label: BlackFang APT
 Suite: stable
 Codename: stable
-Version: 1.0
 Architectures: all amd64
 Components: main
-Date: Tue, 20 May 2025 19:08:25 +0000
-Description: APT repo for BlackFang tools
-
+Description: BlackFang APT Repository
+Date: Wed, 21 May 2025 17:50:56 +0000
 MD5Sum:
- eaefe9fd701efa3cbc26b1fcf0b6906b 380 ./main/binary-all/Packages.gz
- 4fe84e10ddf6c61d8999a490e2256b47 492 ./main/binary-all/Packages
- 4fe84e10ddf6c61d8999a490e2256b47 492 ./main/binary-amd64/Packages
+ c8b82d37343efb3ae7af9b0c639e8f2b              421 main/binary-all/Packages.gz
+ 8ca7fad1114c4e9d89e87ae028f06054              549 main/binary-all/Packages
+ c8b82d37343efb3ae7af9b0c639e8f2b              421 main/binary-amd64/Packages.gz
+ 8ca7fad1114c4e9d89e87ae028f06054              549 main/binary-amd64/Packages
 SHA256:
- 6e17e7181c15a40b88bd609e988e5f7b07c7bb62d07df74364d494d3dc0cf15a 380 ./main/binary-all/Packages.gz
- a75d94635c6733002f54d9514ad1b1668c6d828df25dc85e45bc0534cb20665f 492 ./main/binary-all/Packages
- a75d94635c6733002f54d9514ad1b1668c6d828df25dc85e45bc0534cb20665f 492 ./main/binary-amd64/Packages
+ 06910d6014b587101133344f0b9aa43205539044f52d699955336e7890379577              421 main/binary-all/Packages.gz
+ b0bc4dbb150b081dde9c2aba11f2ce1059c2e34b848bd3e05ce8288826d710ae              549 main/binary-all/Packages
+ 06910d6014b587101133344f0b9aa43205539044f52d699955336e7890379577              421 main/binary-amd64/Packages.gz
+ b0bc4dbb150b081dde9c2aba11f2ce1059c2e34b848bd3e05ce8288826d710ae              549 main/binary-amd64/Packages
+SHA512:
+ 0664a47e2ef7424ede13819cd178343d475fa053e7f9192df5eb23e5ce251f0111796f2ab5e079aa75ae00a687bb17258465cab0d0e17c7017522f4513d121b8              421 main/binary-all/Packages.gz
+ 51f60c55b0fe9fa867e9e47ec1daa3fef05dcd72294d0151950583d0b393829563dbd4ac8536ae4df47a95ad3ce4108387170991e80ab28b528e044854a6bd07              549 main/binary-all/Packages
+ 0664a47e2ef7424ede13819cd178343d475fa053e7f9192df5eb23e5ce251f0111796f2ab5e079aa75ae00a687bb17258465cab0d0e17c7017522f4513d121b8              421 main/binary-amd64/Packages.gz
+ 51f60c55b0fe9fa867e9e47ec1daa3fef05dcd72294d0151950583d0b393829563dbd4ac8536ae4df47a95ad3ce4108387170991e80ab28b528e044854a6bd07              549 main/binary-amd64/Packages
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEnWcFIfy/3bBpj+pMeYiN8xVl7o0FAmgs0y4ACgkQeYiN8xVl
-7o0pGxAAtZnQQQsILB1KuxEJuD9VpdbkzGSchZtT3eBkrOCtA9GEJ2C1fX25GNwJ
-N7iuiH4Y3IsXpBtAqfIuGAUod+07+l0GV8mGU0MdtBfJKLc4C4SGvHm0BNXoERIT
-R7P2cyAv5Kq7XAvzEUNhD2CTfdUPhPVoz9GM7sxVDuggBeEJ/uTHjmeMT23oDw24
-XclRdazqmSXgoE9UtN4CP5FBK1NEWx4W+UOZ5LgGaaASBsc1YY5yWwIzzPf8AFAM
-7kqWx/5HptHXEGl4XO27h6i2SnaiFKg4VNexZMNa/jqm1osaluYNlzf3euTPI4fm
-CBtE734vS0iGksq29YPtFkHaa0YFRpAN9ABDC0zxcyuZCFvn6H3ngEwScIP6AUtJ
-nY4NGWXdDnADDsIoPa4fYKvxyrRO86XNff8xkgPFQF1aWo8p6DQ2k5cxeMsDpq22
-rK3tx+xTP/eBsecy1FFi93brDNQzxdKOJhUo6/7lzugoVtyCvUcelvJefxAnuX9T
-4og3f3fURvQjQV04bojNkLj0LATSfV16xhuP52JU+nIRcQ5vRpf4KYWRt3BLCu9D
-u+bbX9O4fZq862rOMwCPZGLI8y+4ssdFDx1pfJQ3VS1bKI9hzr1AlWnYuexd0nhW
-i40e1sVtiqkg1GJqmRJZbS9md13xdu8qR9ME1f1HJSAVGaA8LHk=
-=RFRn
+iQIzBAEBCgAdFiEEnWcFIfy/3bBpj+pMeYiN8xVl7o0FAmguEokACgkQeYiN8xVl
+7o1PXBAAtWIXwSqvvBSHdbPpQoxEG/JqxrdNAjLjro7oYOF+tLwY7+tA1NR5hM+H
+5Q7vb8kl8u6YfZX0JogaQj8dl3ipvFF9WKZMqkv2UnrkBLuF8FZMF+lMLmup9hYU
+ZmH9PhLgrRa0NQh8qCHwK4bKmYXklHhM5kVLw8WFguVitB7aFRxK3bgFEBIUTThr
+QnYzg0S5R1jk+PIonu4cbaEa3+pUyEaLpIHa90CKW1W6nWzQhhD66FTPf3NPTGy1
+Fb2ZOe+kufq4W6tdCn5XSXq5sjrJBS9HgrEdlSt9vBJWhL8iqai55vS+G3tIp48g
+Jk19eXvHVG2IQWXttJXQV3tjQbaM6N8H9JF+xXOkLLjrzLNcO3eHbQ4mznzacZih
+I0uufH8q4RCUa9kT3cNMRhrwG07AYmTnb6PKc008wbhE4qgsFsxywGYu6cPswjHy
+29NGy+1NPvO2HFFfrnLKTA8FgloLQpfAFQO9LW5mA1RFZglqbdfGlWgZQulnxts7
+5bln3+Z5n4aN+l3EMClHQMfZPS5oTfeqT2cYamJHRx0JvvVwGp4Y6YChDOH8OlDU
+vx/hVX96KPqeJttSpM7cF/ak0SVmZnc+NO6MN0psVTf8iwwcSphi0yOH5s8U8wCx
+fU1KVONva3FbonFivBrR3xUyE/2akaGraPrvV+/XkX3vG4X7mTo=
+=VZTR
 -----END PGP SIGNATURE-----
